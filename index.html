@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="copyright" content="http://arnaud-tessier.fr">
+  <meta name="geo.placename" content="Bordeaux, Gironde">
+  <meta name="geo.region" content="FR">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Jeu du Simon">
+  <meta name="keywords" content="jeu, Simon, couleur, suites, mémoire">
+  <meta name="author" content="Arnaud TESSIER">
+
+ <!-- Titre -->
+  <title>Jeu du Simon</title>
+  
+  <!-- Imports -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="./style.css">
+</head>
+
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="./assets/images/favicon.svg" alt="Arnaud TESSIER">
+    <h3>Jeu du Simon</h3>
+  </header>
+
+   <!-- main -->
+   <section>
+   <div id="app">
+      <button @click="newGame"><span>NOUVELLE PARTIE</span></button>
+      <hr>
+        <h4>** {{ score }} **</h4>
+      <hr>
+      
+      <div class="game">
+        <span class="carre c1" @click="selectSquare('hautGauche')" v-bind:class="{ vert: hautGauche }" @click="playSound"><audio ref="audioElm" src="./assets/sounds/a4.mp3"></audio></span>
+        <span class="carre c2" @click="selectSquare('hautDroite')" v-bind:class="{ rouge: hautDroite }"></span>
+      </div>
+      <div>
+        <span class="carre c3" @click="selectSquare('basGauche')" v-bind:class="{ jaune: basGauche }"></span>
+        <span class="carre c4" @click="selectSquare('basDroite')" v-bind:class="{ bleu: basDroite }"></span>
+      </div>
+
+      <hr>
+    </div>
+  </section>
+
+   <!-- Footer -->
+  <div id="mentions-bottom">
+    <div>
+        <p>Ce site a été entièrement réalisé manuellement à l'aide des technologies suivantes:<br</p>
+    </div>
+    <div class="footer-techno">
+        <img src="./assets/images/html5.png" alt="HTML5" title="HTML5">
+        <img src="./assets/images/css3.png" alt="CSS3" title="CSS3">
+        <img src="./assets/images/javascript.png" alt="JavaScript" title="JavaScript">
+        <img src="./assets/images/vuejs.png" alt="VueJS" title="VueJS">
+    </div>
+  </div>
+
+
+  <!-- import index Vue.JS -->
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

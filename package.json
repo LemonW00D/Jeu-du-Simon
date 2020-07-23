@@ -1,0 +1,11 @@
+{
+  "name": "jeu-du-simon",
+  "version": "1.0.0",
+  "description": "jeu-du-simon_VueJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arnaud TESSIER",
+  "license": "ISC"
+}
